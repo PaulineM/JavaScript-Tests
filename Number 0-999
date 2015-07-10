@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var userNumber = parseInt(prompt('Choisissez un nombre entre 0 et 999'), 10);
+
+
+function nombre(){
+	if (userNumber >= 0 && 999 >= userNumber ) {
+		var unites = [' ', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'];
+		var dizaines = ['dix', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'septante', 'quatre-vingt', 'nonante'];
+
+		if ( userNumber === 0) {
+			alert("zero");
+		}
+
+		else if ( userNumber < 20) {
+			alert(unites[userNumber]);
+		}
+
+		else if (  )
+
+	}
+
+	else if ( isNaN(userNumber) ) {
+		alert('Entrez un nombre !');
+	}
+
+	else {
+		alert('Entrez un nombre ENTRE 0 et 999.');
+	}
+}
+
+nombre();
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
