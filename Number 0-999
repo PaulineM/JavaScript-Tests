@@ -11,8 +11,9 @@ var userNumber = parseInt(prompt('Choisissez un nombre entre 0 et 999'), 10);
 
 function nombre(){
 	if (userNumber >= 0 && 999 >= userNumber ) {
-		var unites = [' ', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'];
-		var dizaines = ['dix', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'septante', 'quatre-vingt', 'nonante'];
+		var unites = ['', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'];
+		var dizaines = ['', 'dix', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'septante', 'quatre-vingt', 'nonante'];
+		var centaines = "cent-";
 
 		if ( userNumber === 0) {
 			alert("zero");
@@ -22,7 +23,20 @@ function nombre(){
 			alert(unites[userNumber]);
 		}
 
-		else if (  )
+		else if ( userNumber >= 20 && userNumber < 1000 ){
+			var lesUnites = userNumber % 10;
+			var lesDizaines = (( userNumber - lesUnites ) % 100 ) / 10;
+			var lesCentaines = (( userNumber - lesUnites - lesDizaines * 10 ) % 1000 ) / 100;
+
+			if ( lesCentaines === 1 ) {
+			alert( centaines + dizaines[lesDizaines] + '-' + unites[lesUnites]);
+		}
+			else {
+				alert( unites[lesCentaines] + centaines + dizaines[lesDizaines] + '-' + unites[lesUnites]);
+			}
+
+
+		}
 
 	}
 
