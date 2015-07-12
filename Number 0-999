@@ -28,13 +28,12 @@ function nombre(){
 			var lesDizaines = (( userNumber - lesUnites ) % 100 ) / 10;
 			var lesCentaines = (( userNumber - lesUnites - lesDizaines * 10 ) % 1000 ) / 100;
 
-			if ( lesCentaines === 1 ) {
-			alert( centaines + dizaines[lesDizaines] + '-' + unites[lesUnites]);
-		}
-			else {
-				alert( unites[lesCentaines] + centaines + dizaines[lesDizaines] + '-' + unites[lesUnites]);
-			}
 
+			var userUnites = ( lesUnites === 1 && lesDizaines !== 8 && lesDizaines > 1 ? 'et-' : '' ) + unites[lesUnites];
+			var userDizaines = ( lesCentaines > 0 ? '-' : '') + dizaines[lesDizaines] + (lesUnites > 0 ? '-' : '');
+			var userCentaines = (lesCentaines > 0 ?( lesCentaines === 1 ? 'cent' : unites[lesCentaines] + '-cent' ) : '')+ userDizaines + userUnites;
+
+			alert( userCentaines );
 
 		}
 
