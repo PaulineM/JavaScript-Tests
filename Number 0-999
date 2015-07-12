@@ -13,7 +13,6 @@ function nombre(){
 	if (userNumber >= 0 && 999 >= userNumber ) {
 		var unites = ['', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'];
 		var dizaines = ['', 'dix', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'septante', 'quatre-vingt', 'nonante'];
-		var centaines = "cent-";
 
 		if ( userNumber === 0) {
 			alert("zero");
